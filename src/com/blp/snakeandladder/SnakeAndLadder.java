@@ -24,7 +24,9 @@ public class SnakeAndLadder {
                 case IS_SNAKE:
                     System.out.println("Snake for the player");
                     position = position - diceNumber;
-
+                    if (position < 0) {
+                        position = 0;
+                    }
                     break;
                 case NO_PLAY:
                     System.out.println("No Play for the Player");

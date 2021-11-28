@@ -11,8 +11,6 @@ public class SnakeAndLadder {
         while (position < WINNING_POSITION) {
             int diceNumber = (int) (Math.floor(Math.random() * 10) % 6 + 1);
             System.out.println("DiceNumber is : " + diceNumber);
-            System.out.println("The Starting Position of Player is : " + position);
-            System.out.println("Player Roll the Dice and get DiceNumber : " + diceNumber);
 
             int option = (int) (Math.floor(Math.random() * 10) % 2 + 1);
 
@@ -22,6 +20,7 @@ public class SnakeAndLadder {
                     position = position + diceNumber;
                     if (position > WINNING_POSITION){
                         System.out.println("No play in the Current Position");
+                        position = position - diceNumber;
                     }
                     break;
                 case IS_SNAKE:
